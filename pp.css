@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Roboto Mono";
+    scroll-behavior: smooth;
+}
+body{
+    background: #333;
+}  
+.container img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.container{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.container,nav ul{
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    background: #005858;
+}
+ul{
+    flex-basis: 60%;
+    margin-top: 20px; 
+}
+.container img{
+    margin-right: auto;
+    margin-left : 20px;
+}
+ul li{
+    display: inline-block;
+} 
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+} 
+section {
+    display:flex;
+    height: 100vh;
+    width: 100%;
+}
+#home{
+    display: flex;
+    /* align-items: center;
+    justify-content: center;  */
+    background-image: url(bcoder.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 300px;
+    padding-left: 400px;
+    color: white ;
+} 
+.home p{
+    font-size: 40px;
+    font-weight: 600;
+}
+.home h1{
+    font-size: 200px;
+    line-height: 160px;
+    /* color: rgba(0, 88, 88, 0.8); */
+    color: transparent;
+    -webkit-text-stroke: 1px #333;
+    background: url(w1.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite; 
+}
+@keyframes back{
+    100%{
+        background-position: 2000px;
+    }
+}
+span{
+    color: #062222;
+    border-right: 3px solid #062222 ;
+    
+}
+.skill h1{
+    padding-top: 90px;
+} 
+.skills-container{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    color: #fff;
+    font-weight: bolder;
+}
+.skill-card{
+    position: relative;
+}
+.skill-image{
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+.skill-name{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    margin: 3px 0 2px; 
+}  
+.skill-info{
+    text-align: center;
+    font-size: 18px; 
+    line-height: 30px; 
+}
+.skill-level{
+     position: absolute;
+     top: 40%;
+     right: 0;
+     width: 150px;
+     height: 150px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 22px;
+     border-radius: 50%;
+     border: 10px solid;
+}
+.skill-card:nth-child(1) .skill-level{
+    background: #e44d2628;
+    border-color: #e44d26;
+    color: #e44d26;
+}
+.skill-card:nth-child(2) .skill-level{
+    background: #006eb928;
+    border-color: #006eb9;
+    color: #006eb9;
+}
+.skill-card:nth-child(3) .skill-level{
+    background: #ffdd2428;
+    border-color: #ffdd24;
+    color: #ffdd24;
+}
+.project h1{
+    padding-top: 90px;
+} 
+.project-image{
+    height: 500px;
+    width: 300px;
+    margin-left: 50px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+} 
+.project-container{
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px; */
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    color: #fff;
+    font-weight: bolder;
+}
+.project-card{
+    height: 400px;
+    position: relative;
+}
+.project-content{
+    position: relative;
+    padding: 40px;
+    color: #005858;
+    font-weight: bolder; 
+    transition: .5s;
+    opacity: 0;
+}
+.project-title{
+    font-size: 50px;
+    text-align: center;
+    font-weight: 300;
+}
+.project-info{
+    margin: 40px; 
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    /* word-wrap: break-word;
+    width: 400px;
+    height: 400px; */
+} 
+.prject-btn-grp{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; 
+}
+.project-btn{
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    border: none;
+    background-color: #005858;
+    color: #fff;
+    cursor: pointer;
+}
+.project-btn.live{
+   background: none;
+   border: 2px solid #fff ;
+} 
+.project-card:hover .project-image{
+    filter: blur(20px)
+}
+.project-card:hover .project-content{
+    opacity: 1;
+}
+.contact h1{
+    padding-top: 150px;
+}
+.contact-section{
+    position: relative;
+    top: 0;
+    transition: 1s;
+    padding: 100px 150px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px; 
+}
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #005858;
+} 
+
+  
